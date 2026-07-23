@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>雪夜书 · 文廷恩致林清雅</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================
+    封面层（神秘入口）
+    ============================================================ -->
+    <div id="cover" class="cover">
+        <div class="cover-inner">
+            <div class="cover-border">
+                <!-- 火漆印章（大） -->
+                <div class="cover-seal" id="coverSeal">
+                    <div class="seal-wax"></div>
+                    <div class="seal-impression">◆</div>
+                </div>
+                <!-- 标题 -->
+                <h1 class="cover-title">雪夜书</h1>
+                <p class="cover-sub">文廷恩 · 致 · 林清雅</p>
+                <!-- 启封按钮 -->
+                <button class="cover-btn" id="unfoldBtn">启 封</button>
+                <!-- 音乐控制 -->
+                <div class="music-control">
+                    <button id="musicToggle" class="music-btn" aria-label="切换背景音乐">
+                        <span id="musicIcon">♫</span>
+                    </button>
+                    <span class="music-label" id="musicLabel">静</span>
+                </div>
+                <p class="cover-hint">—— 点击启封，赴一场雪夜之约 ——</p>
+            </div>
+        </div>
+        <div class="cover-particles" aria-hidden="true"></div>
+    </div>
+
+    <!-- ============================================================
+    背景层
+    ============================================================ -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-overlay"></div>
+    <div class="bg-vignette"></div>
+
+    <!-- ============================================================
+    粒子容器
+    ============================================================ -->
+    <div id="particles-container" aria-hidden="true"></div>
+
+    <!-- ============================================================
+    主内容：信件卡片（初始隐藏）
+    ============================================================ -->
+    <main class="main-container" id="mainContent">
+        <div class="letter-card" role="article" aria-label="文廷恩致林清雅的信件">
+
+            <!-- 四角装饰 -->
+            <span class="corner corner--tl"></span>
+            <span class="corner corner--tr"></span>
+            <span class="corner corner--bl"></span>
+            <span class="corner corner--br"></span>
+
+            <!-- 火漆印章（小） -->
+            <div class="seal" aria-hidden="true"></div>
+            <div class="seal-ribbon" aria-hidden="true"></div>
+
+            <!-- 信件内容 -->
+            <div class="letter-content">
+
+                <h1 class="letter-title">
+                    致 林清雅
+                    <span class="sub">—— 文廷恩 · 雪夜书</span>
+                </h1>
+
+                <div class="divider" aria-hidden="true">
+                    <span class="line"></span>
+                    <span class="diamond">◆ ◇ ◆</span>
+                    <span class="line"></span>
+                </div>
+
+                <!-- ====== 信件正文 ====== -->
+                <div class="letter-body" id="letterBody">
+
+                    <p class="greeting">清雅，</p>
+
+                    <p>雪又下起来了。</p>
+
+                    <p>窗外的世界被裹成一片白，安静得不像话。我坐在书房的壁炉前，手里转着那枚你很久以前随手丢给我的<span class="easter-egg" data-egg="coin">硬币</span>——你说那是你第一次行骗时用的道具，不值钱，但带着你的手温。我把它留到现在，像留着一个秘密。</p>
+
+                    <p>其实我有很多话，从来没当面对你说过。不是不想，是每次话到嘴边，就被我那股子"浪荡子"的惯性拦了回去。我习惯用玩笑化解真心，用漫不经心掩盖在意，可你总是一眼看穿，然后淡淡地笑，那笑容让我觉得自己像个小丑，却又心甘情愿。</p>
+
+                    <p>还记得我们第一次在文家老宅的走廊里撞见吗？你穿着那身伪装成家教的素色裙子，眼神却锋利得像把刀子。我当时心里就想：这女人不是来教书的，是来拆家的。后来才知道，你确实是来拆家的——拆我的家，拆文家的根。可你知道吗？我那时候竟暗暗松了口气，因为终于有人愿意把这栋腐朽的大厦推倒了，而我，那个被钉在继承人位子上的傀儡，居然在那一刻感到了解脱。</p>
+
+                    <p>你说你恨我——恨我姓文，恨我骨子里流着那些人的血。可你又在每一个我装醉摔倒的夜里，轻轻扶住我的胳膊，低声骂我"笨蛋"。你从不问我为什么装醉，我也不问你为什么明明可以一刀了结我，却偏偏选了最慢的方式靠近。我们都在试探，都在等对方先亮出底牌。可后来底牌掀开，你手里握着的是我的真心，我手里握着的是你的软肋——<span class="easter-egg" data-egg="shanya">善雅</span>。</p>
+
+                    <p>那孩子是我们之间最奇妙的意外。她不是我的血脉，却比任何血缘都让我牵挂。你当初带她来，是为了牵制文家，可她却成了唯一能让你我同时卸下防备的人。每次她骑着我的肩膀在花园里疯跑，你站在廊下看着，眼里那层冰就化成了水，就像那年冬天我偷偷放在你窗台的<span class="easter-egg" data-egg="rose">白蔷薇</span>，终于等到了雪融。</p>
+
+                    <p>清雅，复仇的路太苦了。我见过你在深夜独自坐在阳台上，攥着那张旧照片发抖；见过你在文家董事会上强撑着镇定，指甲却掐进了掌心。我没能替你承受那些痛，但我发誓，每一次你转身，我都在你背后——不是作为文家的少爷，而是作为那个愿意陪你一起疯、一起坠落、一起从废墟里爬出来的人。</p>
+
+                    <p>你总说我玩世不恭，可只有你能让我认真。认真地去争一个不属于我的位置，认真地去护一个不该爱的人，认真地去相信，哪怕我们手上都沾着灰，也能在彼此眼里看见干净的未来。</p>
+
+                    <p>现在，一切都结束了。文家的旧梦碎了，新的晨光照进来。善雅在学校里学会了写"家"字，她歪歪扭扭地写了两遍，一遍给我，一遍给你，说"这就是我们"。我笑了很久，然后偷偷哭了——因为我终于知道，原来"家"不是那座阴冷的大宅，而是你和我、和那个小鬼头，围着一张桌子吃饭的每一个晚上。</p>
+
+                    <p><span class="easter-egg" data-egg="snow">雪夜</span>还在下。我把那枚硬币投进壁炉的火里，火光跳了一下，像你第一次对我笑的样子。清雅，我不再说"永远"这种虚词了，但我会把余生的每一天，都过成一句实实在在的"我在"。</p>
+
+                    <p style="text-align:right; text-indent:0; margin-top:1.5rem;">
+                        —— 你那个不再装坏的共犯，<br />
+                        文廷恩
+                    </p>
+                    <p style="text-align:right; text-indent:0; color:var(--text-muted); font-size:0.9rem;">
+                        于一个普通的雪夜，在我们自己的屋檐下。
+                    </p>
+                </div>
+
+                <!-- ====== 时光印记（时间线） ====== -->
+                <div class="timeline-section">
+                    <div class="divider" aria-hidden="true">
+                        <span class="line"></span>
+                        <span class="diamond">✦ 时光印记 ✦</span>
+                        <span class="line"></span>
+                    </div>
+
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">那年深秋</span>
+                                <p class="timeline-desc">初遇 · 文家老宅走廊 —— 你穿着素色裙子，眼神锋利如刀。</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">一个寻常的午后</span>
+                                <p class="timeline-desc">善雅到来 —— 你牵着她走进我的世界，从此多了软肋与铠甲。</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">无数个深夜</span>
+                                <p class="timeline-desc">阳台独坐 —— 你攥着旧照片颤抖，我站在暗处，守着你的背影。</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">文家董事会</span>
+                                <p class="timeline-desc">并肩而立 —— 我们站在漩涡中心，彼此是唯一的锚。</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">那个雪夜</span>
+                                <p class="timeline-desc">和解 · 新生 —— 所有恨意融化，我们成了彼此的屋檐。</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">如今</span>
+                                <p class="timeline-desc">新的家 —— 善雅学会了写"家"，歪歪扭扭，却比任何字都温暖。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ====== 遗物匣子 ====== -->
+                <div class="relic-section">
+                    <div class="divider" aria-hidden="true">
+                        <span class="line"></span>
+                        <span class="diamond">✦ 旧物 · 余温 ✦</span>
+                        <span class="line"></span>
+                    </div>
+
+                    <div class="relic-grid">
+                        <div class="relic-item" data-relic="coin">
+                            <div class="relic-icon">🪙</div>
+                            <div class="relic-name">一枚银元</div>
+                            <div class="relic-desc">她第一次行骗时用的道具，边缘被磨得发亮，像被时光盘了太久。</div>
+                            <button class="relic-btn">细看</button>
+                            <div class="relic-story">
+                                <p>“那枚银元是假的，可你给我的时候，眼神是真的。我把它藏在怀里，贴身放了这么多年，如今它比真银还沉。”</p>
+                            </div>
+                        </div>
+
+                        <div class="relic-item" data-relic="photo">
+                            <div class="relic-icon">🖼️</div>
+                            <div class="relic-name">一张旧照片</div>
+                            <div class="relic-desc">照片上的女人眉眼温柔，是她从未提及的母亲。背面有一行小字。</div>
+                            <button class="relic-btn">细看</button>
+                            <div class="relic-story">
+                                <p>“愿你来生，不必再恨。” —— 那是她母亲留下的唯一一句话。她把照片藏在书里，可我知道，她每晚都会拿出来看。</p>
+                            </div>
+                        </div>
+
+                        <div class="relic-item" data-relic="rose">
+                            <div class="relic-icon">🌹</div>
+                            <div class="relic-name">一枝干枯的白蔷薇</div>
+                            <div class="relic-desc">那年冬天偷偷放在她窗台上的那一枝，她竟一直留着，压在了书页里。</div>
+                            <button class="relic-btn">细看</button>
+                            <div class="relic-story">
+                                <p>“我从母亲的花园里偷了这枝白蔷薇，放在你窗台。第二天它不见了，我以为是被风吹走了。直到十年后，我在你的日记本里发现了它——压得扁平，却依旧洁白。”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== 底部暗语 ====== -->
+                <div class="letter-secret">
+                    <span>◆ 蔷薇已落 · 余香未散 ◆</span>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================================
+    彩蛋浮窗
+    ============================================================ -->
+    <div id="eggModal" class="egg-modal">
+        <div class="egg-modal-content">
+            <button class="egg-modal-close" id="eggClose">&times;</button>
+            <div class="egg-modal-body" id="eggModalBody">
+                <!-- 由 JS 动态填充 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    背景音乐
+    ============================================================ -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="bgm.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <!-- ============================================================
+    外部脚本
+    ============================================================ -->
+    <script src="script.js"></script>
+</body>
+</html>
